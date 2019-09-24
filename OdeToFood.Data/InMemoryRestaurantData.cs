@@ -19,10 +19,16 @@ namespace OdeToFood.Data
             };
         }
 
-        public IEnumerable<Restaurant> GetAll()
+        public Restaurant GetById(int id)
+        {
+            return restaurants.SingleOrDefault(r => r.Id == id);
+        }
+
+        public IEnumerable<Restaurant> GetRestaurantsByName(string restaurantName = null)
         {
             return from r in restaurants
-                   orderby r.Name
+                   where string.IsNullOrEmpty(restaurantName) || r.Name.StartsWith(restaurantName)
+                   orderby r.Name 
                    select r;
         }
     }
