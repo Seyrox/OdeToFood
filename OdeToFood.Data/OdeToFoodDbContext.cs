@@ -8,8 +8,10 @@ namespace OdeToFood.Data
     {
         public DbSet<Restaurant> Restaurants { get; set; }
 
-        public OdeToFoodDbContext()
+        public OdeToFoodDbContext(DbContextOptions<OdeToFoodDbContext> options)
+            :base(options)
         {
+
         }
     }
 }

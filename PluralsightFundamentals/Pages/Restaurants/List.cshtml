@@ -10,11 +10,11 @@
 
 <form method="get">
     <div class="form-group">
-        <div class="input-group">
+        <div class="input-group mb-3">
             <input type="search" placeholder="Type in the name of the restaurant" class="form-control" asp-for="SearchTerm"/>
-            <span class="input-group-append">
-                <button class="btn btn-outline-secondary" type="submit" >Search</button>
-            </span>
+            <div class="input-group-append">
+                <button class="btn btn-secondary" type="submit">Search</button>
+            </div>
         </div>
     </div>
 </form>
@@ -31,9 +31,15 @@
                    asp-page="./Detail" asp-route-restaurantId="@restaurant.Id">
                     <i class="glyphicon glyphicon-zoom-in"></i>
                 </a>
+                <a class="btn btn-btnlg"
+                   asp-page="./Edit" asp-route-restaurantId="@restaurant.Id">
+                    <i class="glyphicon glyphicon-edit"></i>
+                </a>
             </td>
         </tr>
     }
 </table>
+
+<a asp-page="./Edit" class="btn btn-primary">Add a new Restaurant</a>
 
 <div>@Model.Message</div>

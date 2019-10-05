@@ -27,7 +27,7 @@ public class ListModel : PageModel
             RestaurantData = restaurantData;
         }
 
-        public void OnGet(string searchTerm)
+        public void OnGet()
         {
             Message = Configuration["Message"];
             Restaurants = RestaurantData.GetRestaurantsByName(SearchTerm);
