@@ -4,12 +4,12 @@ using OdeToFood.Data;
 
 namespace PluralsightFundamentals.ViewComponents
 {
-    public class RestaurantCountViewComponents
+    public class RestaurantCountViewComponent
         :ViewComponent
     {
         private readonly IRestaurantData restaurantData;
 
-        public RestaurantCountViewComponents(IRestaurantData restaurantData)
+        public RestaurantCountViewComponent(IRestaurantData restaurantData)
         {
             this.restaurantData = restaurantData;
         }

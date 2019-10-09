@@ -7,10 +7,8 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace PluralsightFundamentals.Pages.Restaurants
 {
-    public class ClientDefaultsModel : PageModel
+    public class ClientRestaurantsModel : PageModel
     {
-        public void OnGet()
-        {
-        }
+       
     }
 }

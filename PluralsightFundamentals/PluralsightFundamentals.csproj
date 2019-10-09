@@ -12,15 +12,26 @@
       <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
     </PackageReference>
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+    <PackageReference Include="OdeToCode.UseNodeModules" Version="1.0.6" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Pages\Restaurants\" />
+    <Folder Include="ViewComponents\" />
+    <Folder Include="Pages\Shared\Components\" />
+    <Folder Include="Pages\Shared\Components\RestaurantCount\" />
+    <Folder Include="Pages\R2\" />
+    <Folder Include="api\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Remove="IRestaurantData.cs" />
+    <Compile Remove="Pages\R2\Template.cs" />
+    <Compile Remove="api\ValuesController.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\OdeToFood.Data\OdeToFood.Data.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Pages\R2\Template.cshtml" />
   </ItemGroup>
 </Project>
